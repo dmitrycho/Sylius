@@ -18,6 +18,11 @@
 
     <mapped-superclass name="Sylius\Component\Core\Model\ProductTranslation" table="sylius_product_translation">
         <field name="shortDescription" column="short_description" type="text" nullable="true" />
+        <one-to-many field="images" target-entity="Sylius\Component\Core\Model\ProductImageInterface" mapped-by="owner" orphan-removal="true">
+            <cascade>
+                <cascade-all/>
+            </cascade>
+        </one-to-many>
     </mapped-superclass>
 
 </doctrine-mapping>

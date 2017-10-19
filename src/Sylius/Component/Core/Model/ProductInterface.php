@@ -27,8 +27,7 @@ interface ProductInterface extends
     BaseProductInterface,
     ProductTaxonsAwareInterface,
     ChannelsAwareInterface,
-    ReviewableInterface,
-    ImagesAwareInterface
+    ReviewableInterface
 {
     /*
      * Variant selection methods.

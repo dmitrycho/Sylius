@@ -139,7 +139,7 @@ class ProductRepository extends BaseProductRepository implements ProductReposito
         ;
 
         $this->associationHydrator->hydrateAssociations($product, [
-            'images',
+//            'images', # I do not know how to add correctly translations.images to hydrator yet
             'options',
             'options.translations',
             'variants',
