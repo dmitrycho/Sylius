@@ -61,7 +61,7 @@ final class ProductTypeExtension extends AbstractTypeExtension
                 'choices' => array_flip(Product::getVariantSelectionMethodLabels()),
                 'label' => 'sylius.form.product.variant_selection_method',
             ])
-            ->add('images', CollectionType::class, [
+            /*->add('images', CollectionType::class, [
                 'entry_type' => ProductImageType::class,
                 'entry_options' => ['product' => $options['data']],
                 'allow_add' => true,
@@ -69,7 +69,7 @@ final class ProductTypeExtension extends AbstractTypeExtension
                 'by_reference' => false,
                 'label' => 'sylius.form.product.images',
                 'block_name' => 'entry',
-            ])
+            ])*/
         ;
     }
 
