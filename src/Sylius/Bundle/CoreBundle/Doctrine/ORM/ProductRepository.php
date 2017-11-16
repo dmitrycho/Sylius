@@ -127,7 +127,7 @@ class ProductRepository extends BaseProductRepository implements ProductReposito
     {
         $product = $this->createQueryBuilder('o')
             ->addSelect('translation')
-            ->innerJoin('o.translations', 'translation', 'WITH', 'translation.locale = :locale')
+            ->innerJoin('o.translations', 'translation', 'WITH', 'translation.locale = :locale and translation.enabled = true')
             ->andWhere('translation.slug = :slug')
             ->andWhere(':channel MEMBER OF o.channels')
             ->andWhere('o.enabled = true')
